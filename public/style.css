@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 2em;
+  padding: 1em;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: lightgrey;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+  margin: 1em;
+}
+
+#readmore {
+  display: none;
+}
+
+#welcomeuser {
+  display: none;
+}
+
+.ui.menu .active.item {
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.95);
+  font-weight: normal;
+  box-shadow: none;
+}
