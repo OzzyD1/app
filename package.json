@@ -1,7 +1,7 @@
 {
-  "name": "F1 Race Calender Tracker",
+  "name": "Sim Race Tracker",
   "version": "0.0.1",
-  "description": "Tracks F1 races",
+  "description": "Tracks Your Sim Races",
   "type": "module",
   "main": "server.js",
   "scripts": {
