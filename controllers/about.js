@@ -4,23 +4,23 @@
 import logger from '../utils/logger.js';
 
 // create dashboard object
-const dashboard = {
+const about = {
 
   // index method - responsible for creating and rendering the view
   index(request, response) {
 
     // display confirmation message in log
-    logger.info('dashboard rendering');
+    logger.info('about rendering');
 
     // create view data object (contains data to be sent to the view e.g. page title)
     const viewData = {
-      title: 'Welcome to the Sim Race Tracker Dashboard!',
+      title: 'About The Sim Race Tracker App!',
     };
 
     // render the dashboard view and pass through the data
-    response.render('dashboard', viewData);
+    response.render('about', viewData);
   },
 };
 
 // export the dashboard module
-export default dashboard;
+export default about;
