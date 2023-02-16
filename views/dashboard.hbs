@@ -1,5 +1,18 @@
 {{> menu id="dashboard"}}
 
-<section class="ui segment" id="tableoutput">
+<section class="ui segment">
+  {{#each race}}
+      <h2 class="ui header">
+        {{series}}
+      </h2>
+      {{> listsongs}}
+  {{/each}}
 
+ <p>
+  <span id="rating"></span>
+</p>
+
+  <button class="ui blue button" id = "rateit">
+    Rate it! <i class="star icon"></i>
+  </button>
 </section>

@@ -1,20 +1,26 @@
 <table class="ui fixed striped table">
   <thead>
     <tr>
-      <th>Race</th>
+      <th>Race Number</th>
       <th>Track</th>
       <th>Position</th>
       <th>Fastest Lap</th>
     </tr>
   </thead>
   <tbody>
-    {{#each songs}}
+    {{#each race}}
       <tr>
         <td>
-          {{title}}
+          {{raceNo}}
         </td>
         <td>
-          {{artist}}
+          {{track}}
+        </td>
+        <td>
+          {{position}}
+        </td>
+        <td>
+          {{fLap}}
         </td>
       </tr>
     {{/each}}
