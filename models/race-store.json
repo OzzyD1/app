@@ -1,14 +1,50 @@
 {
-  "raceCollection": {
-    "series": "Open Wheelers Season 3",
-    "race": [
-      {
-        "id": "01",
-        "raceNo": "1",
-        "track": "Bahrain",
-        "position": "2nd",
-        "fLap": "1:32.588"
-      }
-    ]
-  }
+  "raceCollection": [
+    {
+      "series": "Open Wheelers",
+      "race": [
+        {
+          "raceNo": "1",
+          "track": "Bahrain",
+          "position": "2nd",
+          "fLap": "1:32.588"
+        },
+        {
+          "raceNo": "2",
+          "track": "Red Bull GP",
+          "position": "3rd",
+          "fLap": "1:48.588"
+        },
+        {
+          "raceNo": "3",
+          "track": "Laguna Seca",
+          "position": "2nd",
+          "fLap": "1:02.588"
+        }
+      ]
+    },
+    {
+      "series": "Le Mans Prototypes",
+      "race": [
+         {
+          "raceNo": "1",
+          "track": "Bahrain",
+          "position": "2nd",
+          "fLap": "1:32.588"
+        },
+        {
+          "raceNo": "2",
+          "track": "Red Bull GP",
+          "position": "3rd",
+          "fLap": "1:48.588"
+        },
+        {
+          "raceNo": "3",
+          "track": "Laguna Seca",
+          "position": "2nd",
+          "fLap": "1:02.588"
+        }
+      ]
+    }
+  ]
 }
