@@ -10,6 +10,7 @@ const series = {
     logger.debug('Series id = ' + seriesId);
     const viewData = {
       title: 'Series',
+      series: raceStore.getSeries(seriesId)
     };
     response.render('series', viewData);
   },
