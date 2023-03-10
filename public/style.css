@@ -12,20 +12,19 @@ body {
   padding: 1em;
   font-family: sans-serif;
   line-height: 1.5;
-  background-color: lightgrey;
+  background-color: #242424;
 }
 
-img, video {
+img {
   height: auto;
-  max-width: 100%;
-  margin: 1em;
+  float: center;
 }
 
-#readmore {
-  display: none;
+.ui.container {
+  background-color: #454545 !important;
 }
 
-#welcomeuser {
+#readmore, #welcomeuser {
   display: none;
 }
 
