@@ -29,3 +29,6 @@ hideDiv &&
   hideDiv.addEventListener("click", () => {
     hideDiv.style.display = "none"
   })
+
+$(".delrace").click(() => confirm('Really delete this race?'));
+$(".delseries").click(() => confirm('Really delete this series?'))

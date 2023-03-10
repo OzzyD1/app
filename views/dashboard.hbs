@@ -3,6 +3,15 @@
 {{#each races}}
   <section class="ui segment">
     <h2 class="ui header">{{series}}</h2>
-    <a href="/series/{{id}}"> View </a>
+    <a href="/series/{{id}}"> 
+      <button class="ui icon button">
+        <i class="folder open icon"></i>
+      </button> 
+    </a>
+    <a href="/series/deleteseries/{{id}}" class="delseries">
+      <button class="ui icon button">
+        <i class="trash icon"></i>
+      </button>
+    </a>
   </section>
 {{/each}}

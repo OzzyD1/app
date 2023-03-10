@@ -22,9 +22,14 @@ const raceStore = {
   },
   
   removeRace(id, raceId) {
-  const series = this.getSeries(id);
-  // remove the race with id raceID from the playlist
+    const series = this.getSeries(id);
+    // remove the race with id raceID from the playlist
+    _.remove(series.race, { id: raceId });
   },
+  
+  removeSeries(id) {
+    _.remove(this.raceCollection, { id: id });
+},
 
 };
 
