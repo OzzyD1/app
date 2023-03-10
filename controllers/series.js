@@ -4,15 +4,15 @@
 import logger from '../utils/logger.js';
 import raceStore from '../models/race-store.js';
 
-const race = {
+const series = {
   index(request, response) {
-    const raceId = request.params.id;
-    logger.debug('Race id = ' + raceId);
+    const seriesId = request.params.id;
+    logger.debug('Series id = ' + seriesId);
     const viewData = {
-      title: 'Race',
+      title: 'Series',
     };
-    response.render('race', viewData);
+    response.render('series', viewData);
   },
 };
 
-export default race;
+export default series;

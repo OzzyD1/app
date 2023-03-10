@@ -15,6 +15,11 @@ const raceStore = {
   getAllRaces() {
     return this.raceCollection;
   },
+  
+  //   Gets the ID of the race series
+  getSeries(id) {
+    return _.find(this.RaceCollection, { id: id });
+  },
 };
 
 // export the playlistStore object so it can be used elsewhere
