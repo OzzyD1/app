@@ -1,14 +1,11 @@
 {{> menu id="dashboard"}}
 
-<section class="ui segment">
-  {{#each races}}
-      <h2 class="ui header">
-        {{series}}
-      </h2>
-      {{> listraces}}
-  {{/each}}
+{{#each races}}
+  <section class="ui segment">
+    <h2 class="ui header">
+      {{series}}
+    </h2>
+    <a href="/race/{{id}}"> View </a>
 
- <p>
-  <span id="rating"></span>
-</p>
-</section>
+  </section>
+{{/each}}
