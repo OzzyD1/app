@@ -1,6 +1,8 @@
 'use strict';
 
 import { createRequire } from "module";
+import _ from 'lodash';
+
 const require = createRequire(import.meta.url);
 const raceCollection = require("./race-store.json");
 
