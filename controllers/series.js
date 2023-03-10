@@ -22,11 +22,12 @@ const series = {
     raceStore.removeRace(seriesId, raceId);
     response.redirect('/series/' + seriesId);
   },
-      deleteSeries(request, response) {
-      const seriesId = request.params.id;
-      logger.debug(`Deleting series ${seriesId}`);
-      raceStore.removeSeries(seriesId);
-      response.redirect('/dashboard/');
+
+  deleteSeries(request, response) {
+    const seriesId = request.params.id;
+    logger.debug(`Deleting series ${seriesId}`);
+    raceStore.removeSeries(seriesId);
+    response.redirect('/dashboard/');
   },
   
 };
