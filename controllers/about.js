@@ -2,6 +2,7 @@
 
 // import all required modules
 import logger from '../utils/logger.js';
+import developersStore from '../models/developer-store.js'
 
 // create dashboard object
 const about = {
@@ -15,6 +16,7 @@ const about = {
     // create view data object (contains data to be sent to the view e.g. page title)
     const viewData = {
       title: 'About The Sim Race Tracker App!',
+      developers: developersStore.getAllDevelopers(),
     };
 
     // render the dashboard view and pass through the data
