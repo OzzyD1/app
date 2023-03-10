@@ -16,7 +16,7 @@ body {
 }
 
 p, h1, h2 {
-  color: white;
+  color: white !important;
 }
 
 img {
@@ -27,21 +27,28 @@ img {
   align-items: center;
 }
 
-.ui.grid.segment, .ui.menu {
+.ui.grid.segment, .ui.menu, .ui.segment {
   background-color: #454545 !important;
 }
 
 .ui.button {
   padding: 1em 1em 1em 1em;
+  background-color: #CD5334 !important;
 }
 
 #readmore, #welcomeuser {
   display: none;
 }
 
+.ui.menu .item, a {
+  color: #F0F757;
+}
+
+
+
 .ui.menu .active.item {
   background: rgba(0, 0, 0, 0.08);
-  color: rgba(0, 0, 0, 0.95);
+  color: #CD5334;
   font-weight: normal;
   box-shadow: none;
 }
