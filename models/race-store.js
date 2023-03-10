@@ -18,8 +18,14 @@ const raceStore = {
   
   //   Gets the ID of the race series
   getSeries(id) {
-    return _.find(this.RaceCollection, { id: id });
+    return _.find(this.raceCollection, { id: id });
   },
+  
+  removeRace(id, raceId) {
+  const series = this.getSeries(id);
+  // remove the race with id raceID from the playlist
+  },
+
 };
 
 // export the playlistStore object so it can be used elsewhere

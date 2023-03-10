@@ -14,6 +14,15 @@ const series = {
     };
     response.render('series', viewData);
   },
+  
+  deleteRace(request, response) {
+    const seriesId = request.params.id;
+    const raceId = request.params.raceid;
+    logger.debug(`Deleting race ${raceId} from Series ${seriesId}`);
+    raceStore.removeRace(seriesId, raceId);
+    response.redirect('/series/' + seriesId);
+  },
+  
 };
 
 export default series;
