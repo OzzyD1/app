@@ -17,6 +17,8 @@ router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
 router.get('/series/:id', series.index);
 router.get('/series/:id/deleteRace/:raceid', series.deleteRace);
+router.get('/series/deleteseries/:id', series.deleteSeries);
+
 
 
 // export router module

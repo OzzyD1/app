@@ -24,12 +24,7 @@ const dashboard = {
     response.render('dashboard', viewData);
   },
   
-    deleteSeries(request, response) {
-    const playlistId = request.params.id;
-    logger.debug(`Deleting series ${songId} from Playlist ${playlistId}`);
-    playlistStore.removeSong(playlistId, songId);
-    response.redirect('/playlist/' + playlistId);
-  },
+
 
 };
 
