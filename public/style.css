@@ -12,16 +12,27 @@ body {
   padding: 1em;
   font-family: sans-serif;
   line-height: 1.5;
-  background-color: #242424;
+  background-color: #151515;
+}
+
+p, h1, h2 {
+  color: white;
 }
 
 img {
+  max-width: 100%;
   height: auto;
-  float: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ui.container {
+.ui.grid.segment, .ui.menu {
   background-color: #454545 !important;
+}
+
+.ui.button {
+  padding: 1em 1em 1em 1em;
 }
 
 #readmore, #welcomeuser {
