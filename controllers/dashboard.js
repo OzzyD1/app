@@ -27,9 +27,9 @@ const dashboard = {
   
   deleteSeries(request, response) {
     const seriesId = request.params.id;
-    logger.debug(`Deleting series ${seriesId}`);
+    logger.debug(`Deleting Series ${seriesId}`);
     raceStore.removeSeries(seriesId);
-    response.redirect('/dashboard/');
+    response.redirect('/dashboard');
   },
 
   addSeries(request, response) {
