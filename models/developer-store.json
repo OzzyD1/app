@@ -1,22 +1,23 @@
-{"developers":
-  [
-    {
-      "name":"Ozzy",
-      "fullname":"Ozzy Domarkas",
-      "image":"https://cdn.glitch.global/44451524-66a0-4f36-a5d9-0a1d93547714/IMG_4358.JPG?v=1678708676405",
-      "joined":2021,
-      "job":"Web Developer",
-      "city":"Waterford",
-      "mates":9000
-    },
-    {
-      "name":"Grim",
-      "fullname":"Grim Crotty Domarkas",
-      "image":"https://cdn.glitch.global/44451524-66a0-4f36-a5d9-0a1d93547714/IMG_4358.JPG?v=1678708676405",
-      "joined":2021,
-      "job":"Web Developer",
-      "city":"Waterford",
-      "mates":9000
-    }
-  ]
-}
+{
+  "developers":
+    [
+      {
+        "name":"Ozzy",
+        "fullname":"Ozzy Domarkas",
+        "image":"https://cdn.glitch.global/44451524-66a0-4f36-a5d9-0a1d93547714/IMG_4358.JPG?v=1678708676405",
+        "joined":2021,
+        "job":"Web Developer",
+        "city":"Waterford",
+        "mates":9000
+      },
+      {
+        "name":"Grim",
+        "fullname":"Grim Crotty Domarkas",
+        "image":"https://cdn.glitch.global/44451524-66a0-4f36-a5d9-0a1d93547714/PXL_20221222_115949550.jpg?v=1678708840729",
+        "joined":2022,
+        "job":"Assistant",
+        "city":"Waterford",
+        "mates":0
+      }
+    ]
+  }
