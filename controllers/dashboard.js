@@ -31,7 +31,7 @@ const dashboard = {
         title: request.body.title,
         race: [],
       };
-      playlistStore.addPlaylist(newPlayList);
+      raceStore.addSeries(newSeries);
       response.redirect('/dashboard');
   },
 

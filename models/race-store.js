@@ -1,42 +1,44 @@
 'use strict';
 
-import { createRequire } from "module";
-import _ from 'lodash';
-
-const require = createRequire(import.meta.url);
-const raceCollection = require("./race-store.json");
+import logger from '../utils/logger.js';
+import JsonStore from './json-store.js';
 
 const raceStore = {
 
-  // import the races collection object
-  raceCollection: raceCollection.raceCollection,
+  store: new JsonStore('./models/race-store.json', { raceCollection: [] }),
+  collection: 'raceCollection',
 
-  // function to get all of the races
-  getAllRaces() {
-    return this.raceCollection;
+  getAllSeries() {
+    return this.store.findAll(this.collection);
   },
-  
-  //   Gets the ID of the race series
+
   getSeries(id) {
-    return _.find(this.raceCollection, { id: id });
+    return this.store.findOneBy(this.collection, (collection => collection.id === id));
   },
-  
+
   removeRace(id, raceId) {
-    const series = this.getSeries(id);
-    // remove the race with id raceID from the playlist
-    _.remove(series.race, { id: raceId });
+    const arrayName = "race";
+    this.store.removeItem(this.collection, id, arrayName, raceId);
   },
-  
+
   removeSeries(id) {
-    _.remove(this.raceCollection, { id: id });
+    const playlist = this.getPlaylist(id);
+    this.store.removeCollection(this.collection, playlist);
   },
-  
-  addRace(id, race) {
-  const series = this.getSeries(id);
-  series.race.push(race);
+
+  removeAllPlaylists() {
+    this.store.removeAll(this.collection);
+  },
+
+  addPlaylist(playlist) {
+    this.store.addCollection(this.collection, playlist);
+  },
+
+  addSong(id, song) {
+    const arrayName = "songs";
+    this.store.addItem(this.collection, id, arrayName, song);
   },
 
 };
 
-// export the playlistStore object so it can be used elsewhere
-export default raceStore;
+export default playlistStore;
