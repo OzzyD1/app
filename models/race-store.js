@@ -31,9 +31,9 @@ const raceStore = {
     _.remove(this.raceCollection, { id: id });
   },
   
-  addSong(id, song) {
-  const playlist = this.getPlaylist(id);
-  playlist.songs.push(song);
+  addRace(id, race) {
+  const series = this.getSeries(id);
+  series.race.push(race);
   },
 
 };

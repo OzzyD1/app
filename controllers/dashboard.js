@@ -3,6 +3,7 @@
 // import all required modules
 import logger from '../utils/logger.js';
 import raceStore from '../models/race-store.js';
+import { v4 as uuidv4 } from 'uuid';
 
 // create dashboard object
 const dashboard = {
@@ -24,7 +25,15 @@ const dashboard = {
     response.render('dashboard', viewData);
   },
   
-
+    addSeries(request, response) {
+      const newSeries = {
+        id: uuidv4(),
+        title: request.body.title,
+        race: [],
+      };
+      playlistStore.addPlaylist(newPlayList);
+      response.redirect('/dashboard');
+  },
 
 };
 

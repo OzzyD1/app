@@ -18,6 +18,8 @@ router.get('/series/:id', series.index);
 router.get('/series/:id/deleteRace/:raceid', series.deleteRace);
 router.get('/series/deleteseries/:id', series.deleteSeries);
 router.post('/series/:id/addrace', series.addRace);
+router.post('/dashboard/addseries', dashboard.addSeries);
+
 
 // export router module
 export default router;
