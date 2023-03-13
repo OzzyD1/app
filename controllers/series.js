@@ -9,10 +9,11 @@ const series = {
   index(request, response) {
     const seriesId = request.params.id;
     logger.debug('Series id = ' + seriesId);
-    
+    const averagePosition = raceStore.getAverageFinishingPosition(series);
     const viewData = {
       title: 'Series',
       series: raceStore.getSeries(seriesId),
+      averagePosition: averagePosition
     };
     response.render('series', viewData);
   },
