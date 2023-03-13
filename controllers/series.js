@@ -9,9 +9,10 @@ const series = {
   index(request, response) {
     const seriesId = request.params.id;
     logger.debug('Series id = ' + seriesId);
+    
     const viewData = {
       title: 'Series',
-      series: raceStore.getSeries(seriesId)
+      series: raceStore.getSeries(seriesId),
     };
     response.render('series', viewData);
   },

@@ -41,13 +41,12 @@ const raceStore = {
   
   getAverageFinishingPosition(series) {
     let totalPosition = 0;
-    for (const race of series.races) {
-      totalPosition += race.position;
+    for (const race of series.race) {
+      totalPosition += parseInt(race.position);
     }
-    const averagePosition = totalPosition / series.races.length;
+    const averagePosition = totalPosition / series.race.length;
     return averagePosition;
   }
-
 };
 
 export default raceStore;
