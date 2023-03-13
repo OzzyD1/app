@@ -31,8 +31,8 @@
       "id": "05",
       "series": "Le Mans Prototypes",
       "race": [
-         {
-           "id": "06",
+        {
+          "id": "06",
           "raceNo": "1",
           "track": "Bahrain",
           "position": "2nd",
@@ -53,6 +53,11 @@
           "fLap": "1:02.588"
         }
       ]
+    },
+    {
+      "id": "ee8e9da2-5df0-437f-91d0-615e2ccf5cc1",
+      "title": "Saturday Endurance Series",
+      "race": []
     }
   ]
 }

@@ -8,7 +8,7 @@ const raceStore = {
   store: new JsonStore('./models/race-store.json', { raceCollection: [] }),
   collection: 'raceCollection',
 
-  getAllSeries() {
+  getAllRaces() {
     return this.store.findAll(this.collection);
   },
 
@@ -22,23 +22,23 @@ const raceStore = {
   },
 
   removeSeries(id) {
-    const playlist = this.getPlaylist(id);
-    this.store.removeCollection(this.collection, playlist);
+    const series = this.getSeries(id);
+    this.store.removeCollection(this.collection, series);
   },
 
-  removeAllPlaylists() {
+  removeAllSeries() {
     this.store.removeAll(this.collection);
   },
 
-  addPlaylist(playlist) {
-    this.store.addCollection(this.collection, playlist);
+  addSeries(series) {
+    this.store.addCollection(this.collection, series);
   },
 
-  addSong(id, song) {
-    const arrayName = "songs";
-    this.store.addItem(this.collection, id, arrayName, song);
+  addRace(id, race) {
+    const arrayName = "race";
+    this.store.addItem(this.collection, id, arrayName, race);
   },
 
 };
 
-export default playlistStore;
+export default raceStore;

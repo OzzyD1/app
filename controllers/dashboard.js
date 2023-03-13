@@ -25,15 +25,22 @@ const dashboard = {
     response.render('dashboard', viewData);
   },
   
-    addSeries(request, response) {
-      const newSeries = {
-        id: uuidv4(),
-        title: request.body.title,
-        race: [],
-      };
-      raceStore.addSeries(newSeries);
-      response.redirect('/dashboard');
+  deleteSeries(request, response) {
+    const seriesId = request.params.id;
+    logger.debug(`Deleting series ${seriesId}`);
+    raceStore.removeSeries(seriesId);
+    response.redirect('/dashboard/');
   },
+
+  addSeries(request, response) {
+    const newSeries = {
+      id: uuidv4(),
+      title: request.body.title,
+      race: [],
+    };
+    raceStore.addSeries(newSeries);
+    response.redirect('/dashboard');
+    },
 
 };
 

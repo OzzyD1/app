@@ -16,7 +16,7 @@ router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
 router.get('/series/:id', series.index);
 router.get('/series/:id/deleteRace/:raceid', series.deleteRace);
-router.get('/series/deleteseries/:id', series.deleteSeries);
+router.get('/dashboard/deleteseries/:id', dashboard.deleteSeries);
 router.post('/series/:id/addrace', series.addRace);
 router.post('/dashboard/addseries', dashboard.addSeries);
 
