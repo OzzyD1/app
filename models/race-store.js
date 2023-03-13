@@ -38,6 +38,17 @@ const raceStore = {
     const arrayName = "race";
     this.store.addItem(this.collection, id, arrayName, race);
   },
+  
+  getAverageFinishingPosition(series) {
+  let totalPosition = 0;
+  for (const race of series.races) {
+    totalPosition += race.position;
+  }
+  const averagePosition = totalPosition / series.races.length;
+  return averagePosition;
+}
+
+$(".averageResult").append(averagePosition)
 
 };
 
