@@ -40,15 +40,13 @@ const raceStore = {
   },
   
   getAverageFinishingPosition(series) {
-  let totalPosition = 0;
-  for (const race of series.races) {
-    totalPosition += race.position;
+    let totalPosition = 0;
+    for (const race of series.races) {
+      totalPosition += race.position;
+    }
+    const averagePosition = totalPosition / series.races.length;
+    return averagePosition;
   }
-  const averagePosition = totalPosition / series.races.length;
-  return averagePosition;
-}
-
-$(".averageResult").append(averagePosition)
 
 };
 
