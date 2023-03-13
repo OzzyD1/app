@@ -26,13 +26,15 @@ const series = {
   
   addRace(request, response) {
     const seriesId = request.params.id;
-    const series = raceStore.getseries(seriesId);
+    const series = raceStore.getSeries(seriesId);
     const newRace = {
       id: uuidv4(),
       raceNo: request.body.raceNo,
       track: request.body.track,
+      position: request.body.position,
+      fLap: request.body.fLap,
     };
-    raceStore.addSong(seriesId, newRace);
+    raceStore.addRace(seriesId, newRace);
     response.redirect('/series/' + seriesId);
   },
   
