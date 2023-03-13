@@ -33,7 +33,7 @@ img {
 
 .ui.button {
   padding: 1em 1em 1em 1em;
-  background-color: rgba(230, 52, 98, 0.8) !important;
+  background-color: #e6c79c !important;
 }
 
 #readmore, #welcomeuser {
@@ -41,12 +41,12 @@ img {
 }
 
 .ui.menu .item, a {
-  color: #C7EFCF;
+  color: white;
 }
 
 .ui.menu .active.item {
   background: rgba(0, 0, 0, 0.08);
-  color: #EEF5DB;
+  color: white;
   font-weight: normal;
   box-shadow: none;
 }
@@ -60,5 +60,5 @@ img {
 }
 
 .ui.form input {
-  background-color: #EEF5DB;
+  background-color: #f2f2f2;
 }
