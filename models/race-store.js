@@ -31,6 +31,8 @@ const raceStore = {
   },
 
   addSeries(series) {
+    //initialises the variable with 0 when adding a new series
+    series.averagePosition = 0;
     this.store.addCollection(this.collection, series);
   },
 
@@ -39,7 +41,9 @@ const raceStore = {
     this.store.addItem(this.collection, id, arrayName, race);
   },
   
-  getAverageFinishingPosition(series) {
+  //This method is to calculate the average finishing position of the     series
+  getAverageFinishingPosition(seriesId) {
+    const series = this.getSeries(seriesId);
     let totalPosition = 0;
     for (const race of series.race) {
       totalPosition += parseInt(race.position);

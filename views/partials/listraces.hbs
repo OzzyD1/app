@@ -1,38 +1,38 @@
 {{#if races}}
-<table class="ui fixed striped inverted table">
-  <thead>
-    <tr>
-      <th>Race Number</th>
-      <th>Track</th>
-      <th>Position</th>
-      <th>Fastest Lap</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each series.race}}
+  <table class="ui fixed striped inverted table">
+    <thead>
       <tr>
-        <td>
-          {{raceNo}}
-        </td>
-        <td>
-          {{track}}
-        </td>
-        <td>
-          {{position}}
-        </td>
-        <td>
-          {{fLap}}
-        </td>
-        <td>
-          <a href="/series/{{../series.id}}/deleterace/{{id}}" class="ui icon button delrace">
-            <i class="ui trash icon"></i>
-          </a>
-        </td>
+        <th>Race Number</th>
+        <th>Track</th>
+        <th>Position</th>
+        <th>Fastest Lap</th>
+        <th>Actions</th>
       </tr>
-    {{/each}}
-  </tbody>
-</table>
-{{else}}
-  <p>No races found</p>
+    </thead>
+    <tbody>
+      {{#each series.race}}
+        <tr>
+          <td>
+            {{raceNo}}
+          </td>
+          <td>
+            {{track}}
+          </td>
+          <td>
+            {{position}}
+          </td>
+          <td>
+            {{fLap}}
+          </td>
+          <td>
+            <a href="/series/{{../series.id}}/deleterace/{{id}}" class="ui icon button delrace">
+              <i class="ui trash icon"></i>
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+    <p>No races found</p>
 {{/if}}
