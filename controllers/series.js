@@ -23,8 +23,6 @@ const series = {
     raceStore.removeRace(seriesId, raceId);
     response.redirect('/series/' + seriesId);
   },
-
-
   
   addRace(request, response) {
     const seriesId = request.params.id;

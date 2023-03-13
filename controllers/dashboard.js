@@ -35,7 +35,7 @@ const dashboard = {
   addSeries(request, response) {
     const newSeries = {
       id: uuidv4(),
-      title: request.body.title,
+      series: request.body.series,
       race: [],
     };
     raceStore.addSeries(newSeries);
