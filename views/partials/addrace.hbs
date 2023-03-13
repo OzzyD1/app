@@ -1,0 +1,15 @@
+<form class="ui stacked segment form" action="/series/{{series.id}}/addrace" method="POST">
+  <div class="four fields">
+    <div class="field">
+      <label>Race Number</label>
+      <input type="number" name="raceNo" autofocus required title = "Please include a valid number"
+      placeholder="1">
+    </div>
+    <div class="field">
+      <label>Track</label>
+      <input type="text" name="track" required title = "Please include a valid track"
+      placeholder="Bahrain">
+    </div>
+  </div>
+  <button class="ui blue submit button">Add Song</button>
+</form>

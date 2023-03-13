@@ -30,6 +30,17 @@ const series = {
     response.redirect('/dashboard/');
   },
   
+  addSong(request, response) {
+    const seriesId = request.params.id;
+    const series = raceStore.getseries(seriesId);
+    const newRace = {
+      title: request.body.title,
+      artist: request.body.artist,
+    };
+    raceStore.addSong(seriesId, newRace);
+    response.redirect('/series/' + seriesId);
+  },
+  
 };
 
 export default series;

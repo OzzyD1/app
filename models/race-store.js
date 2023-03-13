@@ -29,7 +29,12 @@ const raceStore = {
   
   removeSeries(id) {
     _.remove(this.raceCollection, { id: id });
-},
+  },
+  
+  addSong(id, song) {
+  const playlist = this.getPlaylist(id);
+  playlist.songs.push(song);
+  },
 
 };
 
