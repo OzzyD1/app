@@ -32,3 +32,12 @@ hideDiv &&
 
 $(".delrace").click(() => confirm('Really delete this race?'));
 $(".delseries").click(() => confirm('Really delete this series?'))
+
+function getAverageFinishingPosition(series) {
+  let totalPosition = 0;
+  for (const race of series.races) {
+    totalPosition += race.position;
+  }
+  const averagePosition = totalPosition / series.races.length;
+  return averagePosition;
+}
