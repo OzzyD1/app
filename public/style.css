@@ -32,6 +32,7 @@ img {
 }
 
 .ui.button {
+  margin: .5em .5em .5em .5em;
   padding: 1em 1em 1em 1em;
   color: grey !important;
   background-color: #e6c79c !important;
