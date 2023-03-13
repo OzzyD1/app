@@ -46,11 +46,19 @@ img {
 
 .ui.menu .active.item {
   background: rgba(0, 0, 0, 0.08);
-  color: #CD5334;
+  color: #EEF5DB;
   font-weight: normal;
   box-shadow: none;
 }
 
 .ui.message {
-  background-color: #454545;
+  background-color: #333333;
+}
+
+.ui.form .field > label {
+  color: white;
+}
+
+.ui.form input {
+  background-color: #EEF5DB;
 }
