@@ -1,28 +1,30 @@
 'use strict';
 
-// import all required modules
 import logger from '../utils/logger.js';
 import raceStore from '../models/race-store.js';
 import { v4 as uuidv4 } from 'uuid';
+import accounts from './accounts.js';
 
-// create dashboard object
 const dashboard = {
 
-  // index method - responsible for creating and rendering the view
   index(request, response) {
 
-    // display confirmation message in log
     logger.info('dashboard rendering');
+    const loggedInUser = accounts.getCurrentUser(request);
+    
+    
+    if (loggedInUser) {
+      const viewData = {
+        title: 'Welcome to the Sim Race Tracker Dashboard!',
+        races: raceStore.getAllRaces(),
+        fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+      };
 
-    // create view data object (contains data to be sent to the view e.g. page title)
-    const viewData = {
-      title: 'Welcome to the Sim Race Tracker Dashboard!',
-      races: raceStore.getAllRaces(),
-    };
-
-    // render the dashboard view and pass through the data
-    logger.info('about to render', viewData.races);
-    response.render('dashboard', viewData);
+      // render the dashboard view and pass through the data
+      logger.info('about to render', viewData.races);
+      response.render('dashboard', viewData);
+    }
+    else response.redirect('/');
   },
   
   deleteSeries(request, response) {
@@ -33,11 +35,14 @@ const dashboard = {
   },
 
   addSeries(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     const newSeries = {
       id: uuidv4(),
+      userid: loggedInUser.id,
       series: request.body.series,
       race: [],
     };
+    logger.debug('Creating a new Series' + newSeries);
     raceStore.addSeries(newSeries);
     response.redirect('/dashboard');
     },

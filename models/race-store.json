@@ -1,56 +1,16 @@
 {
   "raceCollection": [
     {
-      "id": "01",
+      "id": "2dca768e-5bfb-4f51-9a53-eccaba4ad687",
+      "userid": "b402b794-b2e6-4c8a-a649-dab49b5117c1",
       "series": "Open Wheelers",
       "race": [
         {
-          "id": "02",
+          "id": "8be874d3-03c0-4e37-89b1-183c7d641a4c",
           "raceNo": "1",
           "track": "Bahrain",
-          "position": "2nd",
-          "fLap": "1:32.588"
-        },
-        {
-          "id": "03",
-          "raceNo": "2",
-          "track": "Red Bull GP",
-          "position": "3rd",
-          "fLap": "1:48.588"
-        },
-        {
-          "id": "04",
-          "raceNo": "3",
-          "track": "Laguna Seca",
-          "position": "2nd",
-          "fLap": "1:02.588"
-        }
-      ]
-    },
-    {
-      "id": "05",
-      "series": "Le Mans Prototypes",
-      "race": [
-        {
-          "id": "06",
-          "raceNo": "1",
-          "track": "Bahrain",
-          "position": "2nd",
-          "fLap": "1:32.588"
-        },
-        {
-          "id": "07",
-          "raceNo": "2",
-          "track": "Red Bull GP",
-          "position": "3rd",
-          "fLap": "1:48.588"
-        },
-        {
-          "id": "08",
-          "raceNo": "3",
-          "track": "Laguna Seca",
-          "position": "2nd",
-          "fLap": "1:02.588"
+          "position": "1srt",
+          "fLap": "0:48.001"
         }
       ]
     }

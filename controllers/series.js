@@ -4,6 +4,7 @@
 import logger from '../utils/logger.js';
 import raceStore from '../models/race-store.js';
 import { v4 as uuidv4 } from 'uuid';
+import accounts from './accounts.js';
 
 const series = {
   index(request, response) {
@@ -37,6 +38,21 @@ const series = {
     raceStore.addRace(seriesId, newRace);
     response.redirect('/series/' + seriesId);
   },
+  
+  updateRace(request, response) {
+  const seriesId = request.params.id;
+  const raceId = request.params.raceid;
+  logger.debug("updating race " + raceId);
+  const updatedRace = {
+    id: raceId,
+    raceNo: request.body.raceNo,
+    track: request.body.track,
+    position: request.body.position,
+    durafLaption: request.body.fLap
+  };
+  raceStore.editRace(seriesId, raceId, updatedRace);
+  response.redirect('/series/' + seriesId);
+  }
   
 };
 

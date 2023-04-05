@@ -1,34 +1,48 @@
-<table class="ui fixed striped inverted table">
-    <thead>
-      <tr>
-        <th>Race Number</th>
-        <th>Track</th>
-        <th>Position</th>
-        <th>Fastest Lap</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each series.race}}
-        <tr>
-          <td>
-            {{raceNo}}
-          </td>
-          <td>
-            {{track}}
-          </td>
-          <td>
-            {{position}}
-          </td>
-          <td>
-            {{fLap}}
-          </td>
-          <td>
-            <a href="/series/{{../series.id}}/deleterace/{{id}}" class="ui icon button delrace">
-              <i class="ui trash icon"></i>
-            </a>
-          </td>
-        </tr>
-      {{/each}}
-    </tbody>
-  </table>
+<table class="ui striped inverted table">
+  <thead>
+    <tr>
+      <th class="one wide">Race Number</th>
+      <th class="four wide">Track</th>
+      <th class="three wide">Position</th>
+      <th class="three wide">Fastest Lap</th>
+      <th class="one wide"> </th>
+      <th class="one wide"> </th>
+    </tr>
+  </thead>
+<tbody>
+    {{#each series.race}}
+    <form class = "ui stacked segment form" action="/series/{{../series.id}}/updaterace/{{id}}" method="POST">
+    <tr class="fields">
+      <td class="field">
+        <span class="ui input">
+         <input type="number" name="raceNo" autofocus required title = "Please include a valid Race Number" placeholder="1" value = "{{raceNo}}">
+        </span>
+      </td>
+      <td class="field">
+        <span class="ui input">
+          <input type="text" name="track" required title = "Please include a valid Track" placeholder="Bahrain" value = "{{track}}">
+        </span>
+      </td>
+      <td class="field">
+        <span class="ui input">
+          <input type="text" name="position" autofocus required title = "Please include a valid position" placeholder="2nd" value = "{{position}}">         
+        </span>
+      </td>
+      <td class="field">
+        <span class="ui input">
+          <input type="text" name="fLap" required title = "Please enter a valid lap time" placeholder="1:53.023" value = "{{fLap}}">
+        </span>
+      </td>
+      <td class="center aligned">
+        <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
+      </td>
+      <td class="center aligned">
+        <a href="/series/{{../series.id}}/deleterace/{{id}}" class="ui icon button delsong">
+          <i class="ui trash icon"></i>
+        </a>
+      </td>
+    </tr>
+    </form> 
+    {{/each}}
+  </tbody>
+</table>
