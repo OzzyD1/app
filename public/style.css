@@ -64,3 +64,11 @@ img {
 .ui.form input {
   background-color: #333333 !important;
 }
+
+.name{
+  padding-top:20px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+  text-transform:capitalize;
+}
