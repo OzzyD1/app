@@ -15,6 +15,7 @@ const about = {
       title: 'About The Sim Race Tracker App!',
       developers: developersStore.getAllDevelopers(),
       fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+      avatar: loggedInUser.avatar
     };
 
     response.render('about', viewData);

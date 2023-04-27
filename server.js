@@ -7,6 +7,7 @@ import exphbs from "express-handlebars";
 import logger from "./utils/logger.js";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import fileUpload from "express-fileupload";
 
 // initialise project
 const app = express();
@@ -15,9 +16,53 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false, }));
 app.use(cookieParser());
+app.use(fileUpload({useTempFiles: true}));
 
 // use handlebars as view engine
-const handlebars = exphbs.create({ extname: ".hbs" });
+const handlebars = exphbs.create({ extname: ".hbs" ,
+  helpers: {
+    
+      uppercase: (inputString) => {
+          return inputString.toUpperCase();
+      },
+    
+      formatDate: (date) => {
+          let dateCreated = new Date(date);
+          let options = {year: "numeric", month: "long", day: "2-digit"};
+
+          return `${dateCreated.toLocaleDateString("en-IE",options)}`;
+      },
+    
+      averagePosition: (arr) => {
+          let position = 0;
+          let count = 0;
+        
+          arr.forEach(race => {
+            position += parseFloat(race.position)
+            count++;
+          });
+          
+          const average = position / count;
+          return average;
+      },
+    
+      calcYears: (joined) => {
+        let date = new Date();
+        let currentYear = date.getUTCFullYear();
+      
+        let employedTime = 0;
+        employedTime = currentYear - joined;
+        return employedTime;
+      },
+    
+      totalRacesCard: (arr) => {
+        let total = 0;
+        total = arr.length;
+        return total;
+      }
+  }
+});
+
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
 

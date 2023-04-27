@@ -27,6 +27,19 @@ img {
   align-items: center;
 }
 
+.ui.menu .item, a {
+  color: white;
+}
+
+a:hover {
+  color: #e6c79c !important;
+}
+
+nav div a:hover {
+  color: #454545 !important;
+  background-color: #e6c79c !important;
+}
+
 .ui.grid.segment, .ui.menu, .ui.segment {
   background-color: #454545 !important;
 }
@@ -34,16 +47,12 @@ img {
 .ui.button {
   margin: .5em .5em .5em .5em;
   padding: 1em 1em 1em 1em;
-  color: grey !important;
+  color: #454545 !important;
   background-color: #e6c79c !important;
 }
 
 #readmore, #welcomeuser {
   display: none;
-}
-
-.ui.menu .item, a {
-  color: white;
 }
 
 .ui.menu .active.item {
@@ -63,12 +72,71 @@ img {
 
 .ui.form input {
   background-color: #333333 !important;
+  color: white !important;
 }
 
-.name{
+.name {
   padding-top:20px;
-  padding-right:5px;
+  padding-right:15px;
   line-height:20px;
   font-weight:bold;
   text-transform:capitalize;
+  color: white;
+}
+
+.profilepic {
+  padding-top:15px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+}
+
+.metadata {
+  padding-left: 1em;
+  padding-bottom: .5em;
+}
+
+.ui.statistic>.value, .ui.statistics .statistic>.value {
+  color: white;
+}
+
+.ui.statistic>.label, .ui.statistics .statistic>.label {
+  color: white;
+}
+
+.ui.header {
+  color:white;
+}
+
+.ui.card, .ui.cards>.card {
+  background-color: transparent !important;
+  color: white;
+}
+
+.ui.card>.content>a.header, .ui.cards>.card>.content>a.header {
+  color: white;
+}
+
+.ui.input>input {
+  background-color: #333333 !important;
+  color: white !important;
+}
+
+.ui.card>.image>img, .ui.cards>.card>.image>img {
+  background-size: contain !important;
+  height: 200 !important;
+}
+
+.meta {
+  color: lightgrey !important;
+}
+
+.description {
+  color: white !important;
+}
+
+textarea {
+  background-color: #333333 !important;
+  color: white !important;
+  border-color: white !important;
 }

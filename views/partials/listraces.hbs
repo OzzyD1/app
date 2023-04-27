@@ -1,3 +1,6 @@
+{{#unless series.race}}
+  <h3 class="ui center aligned message">It's very quiet in here... start adding some races!</h3>
+{{else}}
 <table class="ui striped inverted table">
   <thead>
     <tr>
@@ -46,3 +49,5 @@
     {{/each}}
   </tbody>
 </table>
+
+{{/unless}}

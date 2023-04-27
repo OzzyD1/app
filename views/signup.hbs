@@ -1,7 +1,11 @@
 {{> welcomemenu id="signup"}}
 
-<form class="ui stacked segment form" action="/register" method="POST">
+<form class="ui stacked segment form" action="/register" method="POST" enctype="multipart/form-data">
   <h3 class="ui header">Register</h3>
+  <div class="field">
+    <label>Avatar</label>
+    <input placeholder="Image" type="file" name="avatar" required>
+  </div>
   <div class="two fields">
     <div class="field">
       <label for="firstName">First Name</label>
@@ -11,7 +15,7 @@
     <div class="field">
       <label for="lastName">Last Name</label>
       <input placeholder="Last Name" type="text"  name="lastName" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?"
-             title="Please enter your last name (second nlast name optional) with First Letter capitalised">
+             title="Please enter your last name (second last name optional) with First Letter capitalised">
     </div>
   </div>
   <div class="field">
