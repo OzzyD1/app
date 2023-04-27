@@ -25,8 +25,9 @@ const start = {
       totalSeries: numSeries,
       totalRaces: numRaces,
       averageRaces: raceStore.averageRaces(),
-      // mostRaces: raceStore.mostRaces()
+      mostRaces: raceStore.mostRaces(),
       fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+      avatar: loggedInUser.avatar
     };
 
     response.render('start', viewData);

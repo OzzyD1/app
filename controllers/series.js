@@ -8,11 +8,14 @@ import accounts from './accounts.js';
 
 const series = {
   index(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     const seriesId = request.params.id;
     logger.debug('Series id = ' + seriesId);
     const viewData = {
       title: 'Series',
       series: raceStore.getSeries(seriesId),
+      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+      avatar: loggedInUser.avatar
     };
     response.render('series', viewData);
   },

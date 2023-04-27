@@ -1,15 +1,29 @@
-{{#each races}}
-    <section class="ui segment">
-      <h2 class="ui header">{{series}}</h2>
-      <a href="/series/{{id}}">
-        <button class="ui icon button">
-          <i class="folder open icon"></i>
-        </button>
-      </a>
-      <a href="/dashboard/deleteseries/{{id}}" class="delseries">
-        <button class="ui icon button">
-          <i class="trash icon"></i>
-        </button>
-      </a>
-    </section>
-{{/each}}
+<div class="ui centered cards">
+  {{#each races}}
+    <div class="ui card">
+      <div class="image">
+        <img src="{{picture}}">
+      </div>
+      <div class="content">
+        <a class="header">{{uppercase series}}</a>
+      </div>
+      <div class="metadata">
+        <span class="date">Created: {{formatDate date}}</span>
+      </div>
+      <div class="metadata">
+        <span class="position">Average Finish: {{averagePosition race}}</span>
+      </div>
+      <div class="metadata">
+        <span class="total">Total Races: {{totalRacesCard race}}</span>
+      </div>
+      <div class="extra content">
+        <a href="/series/{{id}}" class="ui icon button">
+          <i class="icon folder open"></i>
+        </a>
+        <a href="/dashboard/deleteseries/{{id}}" class="ui icon button delplaylist">
+          <i class="icon trash"></i>
+        </a>
+      </div>
+    </div>
+  {{/each}}
+</div>

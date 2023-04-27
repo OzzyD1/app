@@ -4,7 +4,6 @@ import logger from '../utils/logger.js';
 import userStore from '../models/user-store.js';
 import { v4 as uuidv4 } from 'uuid';
 
-//create an accounts object
 const accounts = {
 
   //index function to render index page
@@ -25,7 +24,7 @@ const accounts = {
 
   //logout function to render logout page
   logout(request, response) {
-    response.cookie('playlist', '');
+    response.cookie('series', '');
     response.redirect('/');
   },
 
@@ -41,16 +40,18 @@ const accounts = {
   register(request, response) {
     const user = request.body;
     user.id = uuidv4();
-    userStore.addUser(user);
-    logger.info('registering' + user.email);
-    response.redirect('/start');
+    user.avatar = request.files.avatar
+    logger.info('registering: ' + user.email);
+    userStore.addUser(user, function() {
+      response.redirect('/start');
+    })
   },
 
   //authenticate function to check user credentials and either render the login page again or the start page.
   authenticate(request, response) {
     const user = userStore.getUserByEmail(request.body.email);
     if (user && user.password === request.body.password) {
-      response.cookie('playlist', user.email);
+      response.cookie('series', user.email);
       logger.info('logging in' + user.email);
       response.redirect('/start');
     } else {
@@ -60,7 +61,7 @@ const accounts = {
 
  //utility function getCurrentUser to check who is currently logged in
   getCurrentUser (request) {
-    const userEmail = request.cookies.playlist;
+    const userEmail = request.cookies.series;
     return userStore.getUserByEmail(userEmail);
   }
 }

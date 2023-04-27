@@ -1,66 +1,68 @@
-{{> menu}}
+</div>{{> menu}}
 
 <section class="ui two column grid segment">
-  <div class="ui column">
-  <h2 class="ui header">
-    Welcome to the Playlist App, {{fullname}}!
-  </h2>
-    <p>With this app, you can track your sim racing championships.</p>
-    <p>When you complete a race from a championship, first you will need to make championship, then inside you
-       will need to enter in a race along with the number of the race in championship (might not always count up sequentially
-       if you miss a race), name of track, your finishing position and your fastest lap.
-    </p>
-    <div class="buttons">
-      <button class="ui blue button"> Read more <i class="arrow circle right icon"></i></button>
-      <button class="ui green button"> Like it? <i class="arrow circle right icon"></i></button>
-      <button class="ui red button"> Who are you? <i class="user icon"></i></button>
-    </div>
-    <div id="readmore" class="ui message">
-      <p>
-        This is my app which you can use to track your sim racing history.
-      </p>  
-    </div>
-    <div id="welcomeuser" class="ui message" onclick="hideWelcome()"> </div>
-    <div class="ui divider"></div>
+	<div class="ui row">
+		<div class="ui column">
+			<h2 class="ui header">Welcome to the Playlist App, {{fullname}}!</h2>
+			<p>With this app, you can track your sim racing championships.</p>
+			<p>When you complete a race from a championship, first you will need to make championship, then inside you
+				will need to enter in a race along with the number of the race in championship (might not always count up sequentially
+				if you miss a race), name of track, your finishing position and your fastest lap.
+			</p>
+			<div class="buttons">
+				<button class="ui blue button"> Read more <i class="arrow circle right icon"></i></button>
+				<button class="ui green button"> Like it? <i class="arrow circle right icon"></i></button>
+				<button class="ui red button"> Who are you? <i class="user icon"></i></button>
+			</div>
+			<div id="readmore" class="ui message">
+				<p>This is my app which you can use to track your sim racing history.</p>  
+			</div>
+			<div id="welcomeuser" class="ui message" onclick="hideWelcome()"></div>
 
-    <h3 class="ui center aligned header">The Championship Tracker App now contains:</h3>
-    <div class="ui two statistics">
-        <div class="ui huge statistic">
-            <div class="value">
-                {{totalSeries}}
-            </div>
-            <div class="label">
-                Championships
-            </div>
-        </div>
-        <div class="ui huge statistic">
-            <div class="value">
-                {{totalRaces}}
-            </div>
-            <div class="label">
-                Races
-            </div>
-        </div>
-        <div class="ui huge statistic">
-            <div class="value">
-                {{averageRaces}}
-            </div>
-            <div class="label">
-                Average Number of Races
-            </div>
-        </div>
-<!--         <div class="ui statistic">
-            <div class="value">
-                {{mostRaces}}
-            </div>
-            <div class="label">
-                Series with the most races
-            </div>
-        </div> -->
-      </div>
-    </div>
-  
-  <div class="ui column">
-    <img class="ui centered image" src="https://cdn.glitch.global/44451524-66a0-4f36-a5d9-0a1d93547714/david-blume-6Cznnau6qks-unsplash.png?v=1678455137048">
-  </div>
+		</div>
+		<div class="ui column">
+			<img class="ui centered image" src="https://cdn.glitch.global/44451524-66a0-4f36-a5d9-0a1d93547714/david-blume-6Cznnau6qks-unsplash.png?v=1678455137048">
+		</div>
+	</div>
+
+	<div class="ui row">
+		<div class="ui sixteen wide column">
+			<div class="ui divider"></div>
+			<h3 class="ui center aligned header">The Championship Tracker App now contains:</h3>
+			<div class="ui two statistics">
+				<div class="ui huge statistic">
+					<div class="value">
+						{{totalSeries}}
+					</div>
+					<div class="label">
+						Championships
+					</div>
+				</div>
+				<div class="ui huge statistic">
+					<div class="value">
+						{{totalRaces}}
+					</div>
+					<div class="label">
+						Races
+					</div>
+				</div>
+				<div class="ui huge statistic">
+					<div class="value">
+						{{averageRaces}}
+					</div>
+					<div class="label">
+						Average Number of Races
+					</div>
+				</div>
+				<div class="ui statistic">
+					<div class="value">
+						{{mostRaces}}
+					</div>
+					<div class="label">
+						Series with the most races
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

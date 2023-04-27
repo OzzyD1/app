@@ -1,32 +1,28 @@
 {
   "users": [
     {
-      "firstName": "homer",
-      "lastName": "simpson",
-      "email": "homer@simpson.com",
-      "password": "secret",
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
-    },
-    {
-      "firstName": "marge",
-      "lastName": "simpson",
-      "email": "marge@simpson.com",
-      "password": "secret",
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
-    },
-    {
       "firstName": "Ozzy",
       "lastName": "Domarkas",
-      "email": "ozzydomarkas@gmail.com",
+      "email": "ozzy@gmail.com",
       "password": "Password1",
-      "id": "b402b794-b2e6-4c8a-a649-dab49b5117c1"
+      "id": "04d01a64-2bfd-4ff1-ba22-e91dc28bc26a",
+      "avatar": "http://res.cloudinary.com/dtpupahjl/image/upload/v1681995222/vfb75dcbwaj4rg7vr31l.jpg"
+    },
+    {
+      "firstName": "Osvaldas",
+      "lastName": "Domarkas",
+      "email": "ozzydomarkas@gmail.com",
+      "password": "Password1234",
+      "id": "8094c9a0-9c71-4ef6-b63a-269f7c805556",
+      "avatar": "http://res.cloudinary.com/dtpupahjl/image/upload/v1682507193/unk2vo8eteyaeozshdvb.jpg"
     },
     {
       "firstName": "Ozz",
       "lastName": "Dom",
-      "email": "ozzdom@gmail.com",
+      "email": "o@dom.com",
       "password": "Password1",
-      "id": "11820e7b-1576-4199-9c13-a85620291c4e"
+      "id": "b6adcb95-4217-477e-a3ba-bc3283f7df13",
+      "avatar": "http://res.cloudinary.com/dtpupahjl/image/upload/v1682507246/av9xahlnto5mqh4ewgio.jpg"
     }
   ]
 }
